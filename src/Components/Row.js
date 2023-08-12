@@ -14,7 +14,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
     height: "390",
     width: "100%",
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
     },
   };
@@ -33,7 +32,11 @@ function Row({ title, fetchUrl, isLargeRow }) {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-      movieTrailer(movie?.name || "")
+      movieTrailer(movie?.name || "", {
+        option: {
+          videoType: "official",
+        },
+      })
         .then((url) => {
           // https://www.youtube.com/watch?v=XtMThy8QKqU&t=10627s
           const urlParams = new URLSearchParams(new URL(url).search);

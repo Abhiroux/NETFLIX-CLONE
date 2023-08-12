@@ -1,0 +1,53 @@
+/* Reset default list styles and remove link underline */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+  }
+  
+  .sidebar {
+    width: 50px; /* Adjust the width to your preference */
+    background-color: #3333334f; /* Sidebar background color */
+    color: white; /* Text color */
+    height: 100%; /* Sidebar height, adjust if necessary */
+    position: fixed; /* Fix the sidebar position */
+    top: 0;
+     /* Initial position outside the viewport */
+    transition: left 0.3s ease; /* Add a smooth transition effect */
+    padding-top: 20px; /* Adjust the top padding to your preference */
+  }
+  
+  /* Style the sidebar links */
+  .sidebar a {
+    display: block;
+    padding: 14px 16px; /* Adjust the padding to your preference */
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  /* Change link color on hover */
+  .sidebar a:hover {
+    background-color: #555;
+    border-left: solid red 4px;
+  }
+  
+  /* Styles for the hamburger icon */
+  .hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999; /* Make sure the hamburger is above other content */
+  }
+
+  .tvIcon{
+    filter: invert();
+  }
+
+  .iconTitle{
+    margin-left: 15px;
+    display: none;
+  }
